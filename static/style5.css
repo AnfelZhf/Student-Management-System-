@@ -1,0 +1,24 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+
+   
+}
+
+.btn-primary {
+    width: 100%;
+}

@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+    <!-- Add Bootstrap CSS (or any other CSS framework you're using) -->
+    {% block stylesheet %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'style5.css' %}">
+    {% endblock %}
+</head>
+
+
+<body>
+    <div class="container">
+        <h2>Log in</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary">Log in</button>
+        </form>
+        <div class="card-footer text-muted text-center">
+            Create new account <a href="{%url 'signup'%}">Sign up</a>
+          </div>
+    </div>
+</body>
+</html>

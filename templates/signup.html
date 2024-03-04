@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <!-- Add Bootstrap CSS (or any other CSS framework you're using) -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'style4.css' %}">
+</head>
+</head>
+<body>
+    <div class="container">
+        <h2>Sign Up</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary">Sign Up</button>
+        </form>
+        <div class="card-footer text-muted text-center">
+            Already have an account? <a href="{%url 'login'%}">Log in</a>
+          </div>
+    </div>
+</body>
+</html>

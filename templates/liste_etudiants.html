@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Liste des étudiants</title>
+</head>
+<body>
+    <h1>Liste des étudiants</h1>
+    <form action="{% url 'vider_liste_etudiants' %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Vider la liste</button>
+    </form>
+    <ul>
+        {% for etudiant in etudiants %}
+            <li>{{ etudiant.nom }} {{ etudiant.prenom }} - {{ etudiant.matricule }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
